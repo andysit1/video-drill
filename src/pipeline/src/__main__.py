@@ -1,6 +1,6 @@
 import logging
 from .modules.pipeline_builder import PipelineEngine
-from .pipes.dl_stage import DownloadPipe
+from .pipes.entry_stage import EntryPipe
 
 
 logging.basicConfig(
@@ -14,17 +14,19 @@ def main():
 
     engine = PipelineEngine()
 
-    # payload3 = {
-    #     "stream_id" : 2209204696,
-    #     "is_community" : False,
-    #     "video_name" : "cery",
-    # }
+    #TODO change the payload to match
 
-    # payload4 = {
-    #     "stream_id" : 2208310278,
-    #     "is_community" : False,
-    #     "video_name" : "yvonie",
-    # }
+    #TODO remove redunant pipes that we dont need in this program. dl, upload,
+
+    #TODO add file drop into tui app
+
+    #TODO design new tui app and figure the changes we need in a document
+
+    """
+        given a video file -> trigger pipeline  to find the best spots
+            changes we need to mak
+
+    """
 
     payload5 = {
         "stream_id" : 2209761727,
@@ -33,12 +35,8 @@ def main():
     }
 
     logging.info("Starting Program")
-
-    #queue the videos..
-    # engine.q.put(payload3)
-    # engine.q.put(payload4)
     engine.q.put(payload5)
-    engine.run(DownloadPipe(engine=engine))
+    engine.run(EntryPipe(engine=engine))
 
 
 if __name__ == "__main__":
