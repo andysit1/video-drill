@@ -112,6 +112,7 @@ class ModalInputDialog(ModalScreen[str]):
         else:
             self.dismiss()
 
+        print(value)
 
 class ModalAboutDialog(ModalScreen[type(None)]):
     DEFAULT_CSS = """
