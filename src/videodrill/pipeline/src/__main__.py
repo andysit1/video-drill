@@ -25,7 +25,6 @@ def main():
     """
         given a video file -> trigger pipeline  to find the best spots
             changes we need to mak
-
     """
 
     payload5 = {

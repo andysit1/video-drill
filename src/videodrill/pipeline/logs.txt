@@ -52,3 +52,4 @@ INFO:src.modules.pipeline_builder:Entering Pipe <src.pipes.data_cache_stage.Data
 INFO:src.pipes.data_cache_stage:ERROR
 INFO:root:Starting Program
 INFO:src.modules.pipeline_builder:Entering Pipe <src.pipes.data_cache_stage.DataCachePipe object at 0x00000122B10B11C0>
+INFO:root:Starting Program
