@@ -2086,26 +2086,6 @@ socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
-name = "vosk"
-version = "0.3.45"
-description = "Offline open source speech recognition API based on Kaldi and Vosk"
-optional = false
-python-versions = ">=3"
-files = [
-    {file = "vosk-0.3.45-py3-none-linux_armv7l.whl", hash = "sha256:4221f83287eefe5abbe54fc6f1da5774e9e3ffcbbdca1705a466b341093b072e"},
-    {file = "vosk-0.3.45-py3-none-manylinux2014_aarch64.whl", hash = "sha256:54efb47dd890e544e9e20f0316413acec7f8680d04ec095c6140ab4e70262704"},
-    {file = "vosk-0.3.45-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:25e025093c4399d7278f543568ed8cc5460ac3a4bf48c23673ace1e25d26619f"},
-    {file = "vosk-0.3.45-py3-none-win_amd64.whl", hash = "sha256:6994ddc68556c7e5730c3b6f6bad13320e3519b13ce3ed2aa25a86724e7c10ac"},
-]
-
-[package.dependencies]
-cffi = ">=1.0"
-requests = "*"
-srt = "*"
-tqdm = "*"
-websockets = "*"
-
-[[package]]
 name = "websockets"
 version = "12.0"
 description = "An implementation of the WebSocket Protocol (RFC 6455 & 7692)"
@@ -2307,4 +2287,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "26d20583d89b16e3d2d8cd909661b703d2573ada4b43e0da6ad5c3014d99d792"
+content-hash = "052cded7d4ba25787626b5d5b1c423726695a9e5be7ea987f0d33b1e177d54a7"
