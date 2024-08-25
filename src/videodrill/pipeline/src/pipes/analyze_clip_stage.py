@@ -40,7 +40,7 @@ class AnalyzeClipsPipe(Pipe, OpenCVAggregate, FileHandleComponent):
     return sorted(glob.glob(os.path.join(self.engine.payload['clips_out'], "*")), key=os.path.getmtime)
 
   def on_done(self):
-    self.engine.machine.next_state = CompileVideoPipe(self.engine)
+    self.engine.machine.next_state = None
 
   def is_analyze_cache(self):
     if self.file_exists(self.analyze_data):
@@ -99,6 +99,15 @@ class AnalyzeClipsPipe(Pipe, OpenCVAggregate, FileHandleComponent):
                   canny_white_percentage += self.get_canny_edge_detection_white_percentage(img=arr)
                 # self.get_focus_point(arr)
 
+
+            """
+              this is the data_obj I need to update to include more data for the video drill to process/dipslay
+
+                changes
+                  - get rid of the _white_percentage variables, and should sort the video file then write the lines before hand.
+
+            
+            """
 
             data_obj = {
               'name' : clip,

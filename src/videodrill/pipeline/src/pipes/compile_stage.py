@@ -147,33 +147,11 @@ class CompileVideoPipe(Pipe, FFMPEGAggregate):
 
     return video_order
 
-    """
-      Implement Brain Storm
-        for clip in high lower
-          queue clip
-            if queue.len <= 1
-              continue to next clip to queue inorder for more than 2 clips
 
-          compare_clips(line1, line2) -> true or false:
-
-          if true
-            apppend the two
-          else:
-            queue next
-          check the next combinations
-
-        "EXIT CONDITIONS" -> to never loop inf
-        if queue lengh > 4:
-          then pair first two clips and go.
-          save the higher point clip for more idea and if it never matches i rather have a banger at the end of video
-
-        if higher_lower is near end and no match
-          just append rest to video
-
-        ISSUE
-          -> what if it never reaches conditions so we need an exit conditions
-     """
-
+  def generate_selection_txt_file(self):
+    lines = self.data #sorts and adds randomness
+    file_compile_lines = ["file {}".format(line[0]['name'].replace('\\', '/')) for line in lines[1:]]
+    
 
   def compile_video(self):
     self.data.pop()

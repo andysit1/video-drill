@@ -96,7 +96,5 @@ class DataCachePipe(Pipe, FileHandleComponent):
 
   def on_error(self):
     #send to Download if there's any error
-    from src.pipes.dl_stage import DownloadPipe
-    self.engine.machine.current = DownloadPipe(self.engine)
-
+    logger.info("Error in data_cache_stage.py")
 
