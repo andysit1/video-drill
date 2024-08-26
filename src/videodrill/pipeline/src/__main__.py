@@ -26,15 +26,16 @@ def main():
         given a video file -> trigger pipeline  to find the best spots
             changes we need to mak
     """
-
-    payload5 = {
-        "stream_id" : 2209761727,
-        "is_community" : False,
-        "video_name" : "dyrus",
-    }
+    in_file = r'C:\Users\andys\Videos\mine.mkv'
 
     logging.info("Starting Program")
-    engine.q.put(payload5)
+    engine.payload = {
+        "is_community" : False,
+        'video_name' : "test02",
+        "in_filename" : in_file,
+        'is_caster_mode' : False,
+    }
+
     engine.run(EntryPipe(engine=engine))
 
 
