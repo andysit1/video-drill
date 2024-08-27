@@ -10,16 +10,14 @@ from textual import on
 from videodrill.tui.lib.utils import pick_parser
 
 #custom
-from videodrill.tui.screens.modals import ModalAboutDialog, ModalInputDialog, ModalJumpDialog
+from videodrill.tui.screens.modals import ModalAboutDialog
 from videodrill.tui.screens.about import about_text
 
 from videodrill.tui.lib.utils import open_video
 
 class MyApp(App):
     BINDINGS = [
-        Binding("i", "show_input_dialog", "Input Dialog"),
         Binding("a", "show_about_dialog", "About Dialog"),
-        Binding("j", "show_jump_dialog", "Jump Dialog"),
         Binding("d", "delete_row", "Delete Row")
     ]
 
@@ -33,14 +31,9 @@ class MyApp(App):
         yield Static(id="content", expand=True)
         yield Footer()
 
-    def action_show_input_dialog(self) -> None:
-        self.push_screen(ModalInputDialog("Enter your name:"))
 
     def action_show_about_dialog(self) -> None:
         self.push_screen(ModalAboutDialog(about_text))
-
-    def action_show_jump_dialog(self) -> None:
-        self.push_screen(ModalJumpDialog("Jump to:"))
 
     def action_delete_row(self) -> None:
         table : DataTable = self.query(DataTable)
@@ -55,6 +48,7 @@ class MyApp(App):
         self.log(table.get_row(row_key=row_key))
         open_video(table.get_row(row_key=row_key)[0])
 
+    #for later when we want to truc long file size or do an event on header selection
     # @on(DataTable.HeaderSelected)
     # def header_selected(self, message):
     #     table : DataTable = self.query_one(DataTable)
@@ -98,7 +92,6 @@ class MyApp(App):
 
                 for line in lines:
                     converted_dict  = parser(line)
-
                     table.add_row(*tuple(converted_dict.values()))
 
             else:

@@ -1,22 +1,19 @@
-
-
 about_text = """
 ---
 
 ### About
 
-Welcome to our .txt File Parser, a powerful yet intuitive tool built with the Textual library. Designed to simplify your interaction with plain text files, our app efficiently reads, processes, and extracts valuable data from `.txt` documents.
+Welcome to our Clip Extraction Tool, a powerful and intuitive terminal-based application built with the Textual library. This tool is designed to streamline the process of extracting clips from videos using LosslessCut, enabling you to effortlessly trim and save your favorite moments.
 
 Key Features:
-- **Easy-to-Use Interface:** Navigate through your text files with ease in a user-friendly terminal environment.
-- **Customizable Parsing:** Tailor the parsing process to fit your specific requirements.
-- **Open Source:** Our app is built on open-source technology, allowing for transparency and community-driven improvements.
+- **User-Friendly Terminal Interface:** Navigate through your video files and extract clips with ease, all within a sleek terminal UI.
+- **Efficient Clip Extraction:** Quickly pinpoint and extract video segments without compromising quality, thanks to LosslessCut's precision.
+- **Open Source:** Our tool is built on open-source technology, ensuring transparency and encouraging community-driven enhancements.
 
-Built with Textual, our parser leverages the latest in terminal UI technology to bring you a seamless experience. Whether you're a developer, data analyst, or just someone working with text files, our app is designed to make your workflow smoother and more efficient.
+Leveraging the capabilities of Textual, our application delivers a smooth and efficient experience in a terminal environment. Whether you're a video editor, content creator, or simply need to extract clips for personal use, our app is designed to make the process fast and hassle-free.
 
-Thank you for choosing our .txt File Parser. We hope it becomes an essential part of your text processing toolkit.
+Thank you for choosing our Clip Extraction Tool. We hope it becomes an indispensable part of your video editing workflow.
 
 ---
 
-Feel free to modify this to better match your app's features and tone!
 """
