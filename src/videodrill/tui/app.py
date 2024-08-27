@@ -55,6 +55,12 @@ class MyApp(App):
         self.log(table.get_row(row_key=row_key))
         open_video(table.get_row(row_key=row_key)[0])
 
+    # @on(DataTable.HeaderSelected)
+    # def header_selected(self, message):
+    #     table : DataTable = self.query_one(DataTable)
+    #     col_key = message.column_key
+    #     self.log("Selected Row Key {}".format(col_key))
+
     def on_mount(self) -> None:
         table = self.query_one(DataTable)
         table.show_cursor = True
@@ -92,7 +98,9 @@ class MyApp(App):
 
                 for line in lines:
                     converted_dict  = parser(line)
+
                     table.add_row(*tuple(converted_dict.values()))
+
             else:
                 #add a filler column for the index if list or tuple
                 for i in range(len(_)):
@@ -106,8 +114,6 @@ class MyApp(App):
             table.sort("points")
         else:
             print("Column 'points' does not exist in the table.")
-
-
 
 
     # def action_todoactions
